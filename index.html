@@ -20,20 +20,53 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle bg-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Каталог товаров
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Действие</a></li>
-            <li><a class="dropdown-item" href="#">Другое действие</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-          </ul>
-        </li>
-      </ul>
-      <nav class="navbar bg-body-tertiary">
+      <div class="catalog-dropdown">
+  <button class="catalog-dropdown__toggle" type="button" aria-expanded="false" aria-controls="catalog-dropdown-menu" aria-label="Открыть каталог товаров">
+    Каталог товаров
+    <svg class="catalog-dropdown__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="catalog-dropdown__menu" id="catalog-dropdown-menu">
+    <div class="catalog-dropdown__categories">
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Мобильные устройства</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Смартфоны</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Умные часы</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Наушники</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Компьютеры</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Ноутбуки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Мониторы</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Принтеры и сканеры</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Планшеты</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Планшеты</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Электронные книги</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Разное</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Игровые приставки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Портативные колонки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Корпуса и блоки питания</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Аксессуары</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
   <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
@@ -54,6 +87,13 @@
 </nav>
     </div>
   </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Главная</li>
+    <li class="breadcrumb-item"><a href="obzor.html">Обзоры</a></li>
+  </ol>
 </nav>
 
 <section>
@@ -662,11 +702,270 @@
         </div>
     </div>
 </section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__logo">
+      <img src="Frame 52.png" width="100" >
+    </div>
+    
+    <nav class="footer__links">
+      <div class="footer__column">
+        <h3 class="footer__title">Пользователю</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Связаться с нами</a></li>
+          <li><a href="#" class="footer__link">Поддержка пользователей</a></li>
+          <li><a href="#" class="footer__link">FAQ & Руководства</a></li>
+          <li><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+          <li><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h3 class="footer__title">Популярные категории</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Смартфоны</a></li>
+          <li><a href="#" class="footer__link">Teteras electricas</a></li>
+          <li><a href="#" class="footer__link">Стиральные машины</a></li>
+          <li><a href="#" class="footer__link">Телевизоры</a></li>
+          <li><a href="#" class="footer__link">Ноутбуки</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h3 class="footer__title">Команда Behoof</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">О нас</a></li>
+          <li><a href="#" class="footer__link">Работа у нас</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="footer__copyright">
+      <p>Copyright © 2023 Behoof, Inc. Все права защищены</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+    document.querySelector('.catalog-dropdown__toggle').addEventListener('click', function() {
+  const dropdown = this.closest('.catalog-dropdown');
+  dropdown.classList.toggle('open');
+  
+  // Обновляем aria-атрибуты
+  const isExpanded = dropdown.classList.contains('open');
+  this.setAttribute('aria-expanded', isExpanded);
+});
+
+// Закрытие при клике вне dropdown
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.catalog-dropdown')) {
+    const openDropdowns = document.querySelectorAll('.catalog-dropdown.open');
+    openDropdowns.forEach(dropdown => {
+      dropdown.classList.remove('open');
+      dropdown.querySelector('.catalog-dropdown__toggle').setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+</script>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<style>
+    @media (max-width: 640px) {
+  /* Навигационная панель */
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+  
+  .navbar p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .navbar-collapse {
+    width: 100%;
+  }
+  
+  .catalog-dropdown {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .d-flex {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .bi {
+    margin: 5px;
+  }
+  
+  /* Хлебные крошки */
+  .breadcrumb {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Блоки товаров */
+  .tovars {
+    flex-direction: column;
+  }
+  
+  .tovar-1 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Категории */
+  .bibor {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  /* Особенности */
+  .features-container {
+    flex-direction: column;
+  }
+  
+  .feature-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Карусель */
+  .carousel-inner {
+    padding: 0 15px;
+  }
+  
+  .product-card {
+    width: 100%;
+  }
+  
+  /* Статистика */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Преимущества */
+  .benefits__content {
+    flex-direction: column;
+  }
+  
+  .benefits__image {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  
+  /* Каталог товаров */
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .product-card {
+    margin-bottom: 15px;
+  }
+  
+  /* Обзоры */
+  .reviews {
+    flex-direction: column;
+  }
+  
+  .review-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Футер */
+  .footer__links {
+    flex-direction: column;
+  }
+  
+  .footer__column {
+    margin-bottom: 20px;
+  }
+  
+  /* Общие настройки */
+  h2 {
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+  
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+/* Дополнительные стили для улучшения мобильного отображения */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  button, .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .product-title {
+    font-size: 14px;
+  }
+  
+  .product-price {
+    font-size: 16px;
+  }
+  
+  .rating-label, .rating-value {
+    font-size: 12px;
+  }
+  
+  .progress-bar {
+    height: 8px;
+  }
+  
+  .stat__number {
+    font-size: 2rem;
+  }
+  
+  .stat__description {
+    font-size: 12px;
+  }
+  
+  .benefits__title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  .review-title {
+    font-size: 1rem;
+  }
+  
+  .review-text {
+    font-size: 12px;
+  }
+  
+  .footer__title {
+    font-size: 1rem;
+  }
+  
+  .footer__link {
+    font-size: 14px;
+  }
+  
+  .footer__copyright {
+    font-size: 12px;
+  }
+}
+</style>
 
 
 
