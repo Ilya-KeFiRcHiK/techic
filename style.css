@@ -11,9 +11,27 @@
     padding: 0 15px;
   }
 
+  .navbar-logo-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo-container h1{
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .navbar-logo-container p{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 125px;
+  }
+
   .navbar {
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
     background-color: white !important;
   }
   
@@ -25,7 +43,9 @@
   }
   
   .navbar p {
-    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     font-size: 12px;
     line-height: 1.2;
     color: #6c757d;
@@ -98,7 +118,6 @@ section {
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     position: relative;
     overflow: hidden;
-    min-height: 230px;
   }
   
   
@@ -142,13 +161,19 @@ section {
 
   .bibor{
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
     text-align: center;
   }
 
-  h2{
+  .bibor p{
+    margin-top: 10px;
+  }
+
+  .index-h2{
     text-align: center;
+    font-size: 32px;
     margin-top: 50px;
   }
 
@@ -184,7 +209,7 @@ section {
     min-width: 160px;
     background: #f8f9fa;
     border-radius: 12px;
-    padding: 15px;
+    padding: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.2s, box-shadow 0.2s;
   }
@@ -198,7 +223,6 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
   }
   
   .feature-title {
@@ -255,6 +279,336 @@ section {
     margin: 0 0 16px 0;
     color: #1c1c1e;
   }
+
+  .product-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+  }
+
+  .product-card {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .obzor-h2{
+      font-size: 32px;
+      text-align: center;
+    }
+        .vibor-h1{
+          font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .filter-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            width: 500px;
+            background: var(--light-gray);
+            margin-left: 700px;
+        }
+
+        .filter-section:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .filter-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 2px;
+            margin-right: 8px;
+        }
+
+        .filter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .filter-item:hover {
+            background: var(--primary-light);
+        }
+
+        .filter-item input[type="checkbox"],
+        .filter-item input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 5px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .custom-radio {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .filter-item input:checked ~ .custom-checkbox {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .filter-item input:checked ~ .custom-radio {
+            border-color: var(--primary);
+        }
+
+        .custom-checkbox::after,
+        .custom-radio::after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox::after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .custom-radio::after {
+            left: 4px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+        }
+
+        .filter-item input:checked ~ .custom-checkbox::after,
+        .filter-item input:checked ~ .custom-radio::after {
+            display: block;
+        }
+
+        .filter-label {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .radio-option {
+            flex: 1;
+        }
+        
+        .section {
+          margin-left: 550px;
+            margin-bottom: 28px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 16px;
+            width: 800px;
+            transition: all 0.2s ease;
+        }
+        
+        .section:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .price-range {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .price-item {
+            flex: 1;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .price-item::before {
+            content: "—";
+            margin-right: 6px;
+            color: var(--primary-color);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .checkbox-item:hover {
+            background-color: var(--hover-color);
+        }
+        
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            margin-right: 12px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        
+        input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        :root {
+            --text-color: #2d3748;
+            --light-gray: #f7fafc;
+            --border-color: #e2e8f0;
+            --hover-color: #f0f4ff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        input[type="checkbox"]:checked::after {
+            content: "✓";
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .checkbox-item label {
+            cursor: pointer;
+            font-size: 15px;
+            flex: 1;
+        }
+    
+    .carousel-inner {
+        padding: 20px 0;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: 5%;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+  .carousel-item .d-flex {
+            padding: 40px 0;
+        }
+        .category-card {
+            width: 300px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 8px;
+            background: #f5f5f5;
+            transition: all 0.3s ease;
+            margin: 0 7px;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .category-card img {
+            width: 250px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            opacity: 1;
+        }
+        .carousel-control-prev {
+            left: 20px;
+        }
+        .carousel-control-next {
+            right: 20px;
+        }
+        .carousel-control-prev-icon, 
+        .carousel-control-next-icon {
+            filter: brightness(0);
+            width: 20px;
+            height: 20px;
+        }
   
   .product-image img {
     border-radius: 12px;
@@ -560,18 +914,6 @@ section {
             position: relative;
             padding-top: 100%; /* Квадратное соотношение */
             background: #f5f5f5;
-        }
-
-        
-
-        .product-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 15px;
         }
 
         .product-content {
@@ -900,8 +1242,9 @@ section {
 .catalog-dropdown__toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
+  gap: 4px;
+  padding: 8px;
+  width: 160px;
   background-color: #2c3e50;
   color: white;
   border: none;
