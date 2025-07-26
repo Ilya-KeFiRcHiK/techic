@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<container>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="navbar-logo-container">
+      <img src="behoof_logo.png" alt="">
+      <h1>Behoof</h1>
+      <p>Лучшие цены в интернет-магазинах</p>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="catalog-dropdown">
+  <button class="catalog-dropdown__toggle" type="button" aria-expanded="false" aria-controls="catalog-dropdown-menu" aria-label="Открыть каталог товаров">
+    Каталог товаров
+    <svg class="catalog-dropdown__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="catalog-dropdown__menu" id="catalog-dropdown-menu">
+    <div class="catalog-dropdown__categories">
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Мобильные устройства</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Смартфоны</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Умные часы</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Наушники</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Компьютеры</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Ноутбуки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Мониторы</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Принтеры и сканеры</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Планшеты</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Планшеты</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Электронные книги</a></li>
+        </ul>
+      </section>
+      
+      <section class="catalog-dropdown__category">
+        <h3 class="catalog-dropdown__category-title">Разное</h3>
+        <ul class="catalog-dropdown__list">
+          <li><a href="#" class="catalog-dropdown__link">Игровые приставки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Портативные колонки</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Корпуса и блоки питания</a></li>
+          <li><a href="#" class="catalog-dropdown__link">Аксессуары</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <button class="btn btn-outline-success" type="submit">Поиск</button>
+    </form>
+  </div>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+  <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+</svg>
+</nav>
+    </div>
+  </div>
+</nav>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+    <li class="breadcrumb-item"><a href="obzor.html">Обзор</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Продукт</li>
+  </ol>
+</nav>
+
+
+
+<h2>Обзоры</h2>
+
+  <section class="reviews">
+    <div class="review-card review-card--primary">
+        <div class="review-content">
+            <img src="Frame 2371.png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--secondary">
+        <div class="review-content">
+            <img src="Frame 2371 (1).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--tertiary">
+        <div class="review-content">
+            <img src="Frame 2371 (2).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--quaternary">
+        <div class="review-content">
+            <img src="Frame 2371 (3).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="review-card review-card--primary">
+        <div class="review-content">
+            <img src="Frame 2371 (3).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--secondary">
+        <div class="review-content">
+            <img src="Frame 2371 (2).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--tertiary">
+        <div class="review-content">
+            <img src="Frame 2371.png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+
+    <div class="review-card review-card--quaternary">
+        <div class="review-content">
+            <img src="Frame 2371 (1).png" alt="">
+            <h3 class="review-title">Обзор устаревших смартфонов</h3>
+            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra enim nunc.</p>
+            <button class="review-button">Смотреть <span class="arrow">→</span></button>
+        </div>
+    </div>
+</section>
+
+<h1>Качественные характеристики</h1>
+    
+    <div class="section price-section">
+        <h2>Цена</h2>
+        <div class="price-range">
+            <div class="price-item">От 12 511</div>
+            <div class="price-item">До 99 511</div>
+        </div>
+    </div>
+    
+    <div class="section battery-section">
+        <h2>Батарея</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="battery1">
+                <label for="battery1">Высокая емкость (5000 мАч+)</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="battery2" checked>
+                <label for="battery2">Быстрая зарядка</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="battery3">
+                <label for="battery3">Съемный аккумулятор</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="battery4">
+                <label for="battery4">Энергосберегающий режим</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section camera-section">
+        <h2>Камера</h2>
+        <div class="checkbox-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="camera1">
+                <label for="camera1">Основная камера 48 МП+</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="camera2" checked>
+                <label for="camera2">Оптическая стабилизация</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="camera3">
+                <label for="camera3">Телеобъектив</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="camera4">
+                <label for="camera4">Ночной режим</label>
+            </div>
+        </div>
+    </div>
+
+    <h1>Дополнительные фильтры</h1>
+    
+    <div class="filter-section">
+        <h2 class="filter-title">Ответ</h2>
+        <div class="filter-list">
+            <label class="filter-item">
+                <input type="checkbox" id="response1">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Быстрый отклик сенсора</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="response2">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Голосовое управление</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="response3">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Жесты управления</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="response4">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Сенсорные кнопки</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="response5">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Тактильная отдача</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="filter-section">
+        <h2 class="filter-title">Портативность</h2>
+        <div class="filter-list">
+            <label class="filter-item">
+                <input type="checkbox" id="portability1">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Компактный размер</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="portability2">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Легкий вес</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="portability3">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Складная конструкция</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="portability4">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Водонепроницаемость</span>
+            </label>
+            <label class="filter-item">
+                <input type="checkbox" id="portability5">
+                <span class="custom-checkbox"></span>
+                <span class="filter-label">Ударопрочный корпус</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="filter-section">
+        <h2 class="filter-title">4G (LTE)</h2>
+        <div class="radio-group">
+            <label class="filter-item radio-option">
+                <input type="radio" name="lte" id="lte-yes" checked>
+                <span class="custom-radio"></span>
+                <span class="filter-label">Есть</span>
+            </label>
+            <label class="filter-item radio-option">
+                <input type="radio" name="lte" id="lte-no">
+                <span class="custom-radio"></span>
+                <span class="filter-label">Нет</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="product-catalog">
+  <div class="product-header">
+    <div class="expert-rating">
+      <img src="Telephone.png" alt="iPhone" class="product-image">
+      <div class="rating-content">
+        <p class="rating-title">Оценка экспертов</p>
+        <div class="rating-stars">
+          <p class="rating-447">4.0 <img src="Rating.png" alt="Рейтинг"> 447 отзывов</p>
+        </div>
+      </div>
+    </div>
+    <h1 class="product-title">Apple iPhone 13 Pro Max 256 ГБ серый</h1>
+    <img src="Telephone.png" alt="">
+  </div>
+
+  <div class="product-price">
+    <p>78 999 ₽</p>
+  </div>
+
+  <div class="product-features">
+    <div class="feature">
+      <img src="Check.png" alt="✓" class="feature-icon">
+      <p>Dual Sim, 3G, 4G, 5G, VoLTE, Wi-fi, NFC</p>
+    </div>
+    <div class="feature">
+      <img src="Check.png" alt="✓" class="feature-icon">
+      <p>6.1 inches, 1170 * 2532 px Display with Small Notch</p>
+    </div>
+    <div class="feature">
+      <img src="Check.png" alt="✓" class="feature-icon">
+      <p>Bionic A15, Hexa Core, 3.22 GHz Processor</p>
+    </div>
+    <div class="feature">
+      <img src="Check.png" alt="✓" class="feature-icon">
+      <p>12 MP + 12 MP Dual Rear & 12 MP Front Camera</p>
+    </div>
+  </div>
+
+  <div class="product-specs">
+    <div class="spec">
+      <img src="Check.png" alt="✓" class="spec-icon">
+      <p>4 GB RAM, 128 GB inbuilt</p>
+    </div>
+    <div class="spec">
+      <img src="Cross.png" alt="✗" class="spec-icon">
+      <p>Memory Card Not Supported</p>
+    </div>
+    <div class="spec">
+      <img src="Check.png" alt="✓" class="spec-icon">
+      <p>3240 mAh Battery with Fast Charging</p>
+    </div>
+    <div class="spec">
+      <img src="Check.png" alt="✓" class="spec-icon">
+      <p>iOS v15</p>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <div class="rating-item">
+      <div class="rating-info">
+        <span class="rating-label">Дизайн</span>
+        <span class="rating-value">65%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill design" style="width: 65%"></div>
+      </div>
+    </div>
+    
+    <div class="rating-item">
+      <div class="rating-info">
+        <span class="rating-label">Батарея</span>
+        <span class="rating-value">35%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill battery" style="width: 35%"></div>
+      </div>
+    </div>
+    
+    <div class="rating-item">
+      <div class="rating-info">
+        <span class="rating-label">Дисплей</span>
+        <span class="rating-value">50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill display" style="width: 50%"></div>
+      </div>
+    </div>
+    
+    <div class="rating-item">
+      <div class="rating-info">
+        <span class="rating-label">Камера</span>
+        <span class="rating-value">75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill camera" style="width: 75%"></div>
+      </div>
+    </div>
+    
+    <div class="rating-item">
+      <div class="rating-info">
+        <span class="rating-label">Производительность</span>
+        <span class="rating-value">70%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill performance" style="width: 70%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__logo">
+      <img src="Frame 52.png" width="100" >
+    </div>
+    
+    <nav class="footer__links">
+      <div class="footer__column">
+        <h3 class="footer__title">Пользователю</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Связаться с нами</a></li>
+          <li><a href="#" class="footer__link">Поддержка пользователей</a></li>
+          <li><a href="#" class="footer__link">FAQ & Руководства</a></li>
+          <li><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+          <li><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h3 class="footer__title">Популярные категории</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Смартфоны</a></li>
+          <li><a href="#" class="footer__link">Teteras electricas</a></li>
+          <li><a href="#" class="footer__link">Стиральные машины</a></li>
+          <li><a href="#" class="footer__link">Телевизоры</a></li>
+          <li><a href="#" class="footer__link">Ноутбуки</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__column">
+        <h3 class="footer__title">Команда Behoof</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">О нас</a></li>
+          <li><a href="#" class="footer__link">Работа у нас</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="footer__copyright">
+      <p>Copyright © 2023 Behoof, Inc. Все права защищены</p>
+    </div>
+  </div>
+</footer>
